@@ -33,20 +33,20 @@ public class mainProducto {
 		}
 		System.out.println("==============================================");
 		
-		/*Búsqueda de usuario con id=2*/
-		System.out.println("Buscar usuario con id=P0002");
+		/*Búsqueda de con id=P002*/
+		System.out.println("Buscar Producto con id=P0002");
 		System.out.println("-----------------------");
 		Producto us = em.find(Producto.class,"P0002");
 		System.out.println(us);
 		System.out.println("==============================================");
 
-		/*Insertar nuevo usuario*/
-		System.out.println("Insertar nuevo producto: Ponds Oliva, de Categoria = 2 (cliente) y id_prod=P0001");
+		/*Insertar nuevo*/
+		System.out.println("Insertar nuevo producto: Ponds Oliva  y id_prod=P0001");
 		System.out.println("-------------------------------------------------------------------------");
 		em.getTransaction().begin();
 		Producto producto = new Producto();
 		Date fecha = new Date();
-		//Seleccionamos el tipo de id=2 para crear el usuario del tipo Cliente
+		
 		Categoria cat = em.find(Categoria.class, 2);
 		Proveedor prov = em.find(Proveedor.class, 2);
 		//Asignamos valores a los atributos
@@ -61,7 +61,7 @@ public class mainProducto {
 		em.getTransaction().commit();
 		System.out.println("==============================================");
 		
-		/*Actualizar usuario*/
+		/*Actualizar */
 		System.out.println("Actualizamos producto con id=P0021: y actualizamos campo DESPROD= Ponds Carbon");
 		System.out.println("-------------------------------------------------------------------");
 		em.getTransaction().begin();
